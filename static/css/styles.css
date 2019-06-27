@@ -56,8 +56,17 @@ footer {
   padding: 15px;
 }
 
+.spacer{
+  padding: 2px;
+}
+
+
+#snav{
+  width: 15%;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 300px) {
   .sidenav {
     height: auto;
     padding: 15px;

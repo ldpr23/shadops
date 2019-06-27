@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
     <div class="row content">
-        <div class="col-sm-3 sidenav">
+        <div id="snav" class="col-sm-3 sidenav">
             <h4>Filters</h4>
             <hr>
             <ul class="nav nav-pills nav-stacked">
@@ -23,13 +23,68 @@
                 <!--<li><a href="#section3">Photos</a></li>-->
 
                 <div id="myBtnContainer">
-                    <li><button class="btn active" onclick="filterSelection('all')"> Show all</button></li>
-                    <li><button class="btn" onclick="filterSelection('location')"> Location</button></li>
-                    <li><button class="btn" onclick="filterSelection('building')"> Building</button></li>
-                    <li><button class="btn" onclick="filterSelection('tech')"> Technology</button></li>
-                    <li><button class="btn" onclick="filterSelection('languages')"> Languages</button></li>
-                    <li><button class="btn" onclick="filterSelection('lob')"> Line of Business</button></li>
+                    <li><button class="btn active" onclick="filterSelection('all')"> Clear</button></li>
+
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseLocation" aria-expanded="false" aria-controls="collapseExample">
+                            Location
+                        </button>
+                        <div class = "collapse" id="collapseLocation" >
+                            <li><button class="btn"  onclick="filterSelection('Glasgow')"> Glasgow</button></li>
+                            <li><button class="btn"  onclick="filterSelection('London')"> London</button></li>
+                        </div>
+                    </div>
+
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Building
+                        </button>
+                        <div class = "collapse" id="collapseExample" >
+                            <li><button class="btn"  onclick="filterSelection('waterloo')"> Wateroo</button></li>
+                            <li><button class="btn"  onclick="filterSelection('bothwell')"> Bothwell</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+
+                    <div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTech" aria-expanded="false" aria-controls="collapseExample">
+                            Technology
+                        </button>
+                        <div class = "collapse" id="collapseTech" >
+                            <li><button class="btn"  onclick="filterSelection('Java')"> AI/ML</button></li>
+                            <li><button class="btn"  onclick="filterSelection('JS')"> Cloud</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseLang" aria-expanded="false" aria-controls="collapseExample">
+                            Languages
+                        </button>
+                        <div class = "collapse" id="collapseLang" >
+                            <li><button class="btn"  onclick="filterSelection('waterloo')"> Java</button></li>
+                            <li><button class="btn"  onclick="filterSelection('bothwell')"> JavaScript</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBusiness" aria-expanded="false" aria-controls="collapseExample">
+                            Line of Business
+                        </button>
+                        <div class = "collapse" id="collapseBusiness" >
+                            <li><button class="btn"  onclick="filterSelection('waterloo')"> CiB</button></li>
+                            <li><button class="btn"  onclick="filterSelection('bothwell')"> AWM</button></li>
+                        </div>
+                    </div>
                 </div>
+
+
             </ul><br>
 
         </div>
