@@ -1,0 +1,158 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../../static/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-12">
+      <h2>ShadOps</h2>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <h3>Category</h3>
+    </div>
+    <div class="col col-lg-8">
+      <h2>Results</h2>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+        <button class="btn" onclick="filterSelection('location')"> Location</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv location">Glasgow</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv cars">London</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('building')"> Building</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv building">Waterloo</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv building">Bothwell</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('tech')"> Technology</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">ML/AI</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Cloud</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('languages')"> Languages</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Python</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Java</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('lob')"> Line of Business</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">CIB</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">AWM</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="filterDiv cars">BMW</div>
+  <div class="filterDiv colors fruits">Orange</div>
+  <div class="filterDiv cars">Volvo</div>
+  <div class="filterDiv colors">Red</div>
+  <div class="filterDiv cars animals">Mustang</div>
+  <div class="filterDiv colors">Blue</div>
+  <div class="filterDiv animals">Cat</div>
+  <div class="filterDiv animals">Dog</div>
+  <div class="filterDiv fruits">Melon</div>
+  <div class="filterDiv fruits animals">Kiwi</div>
+  <div class="filterDiv fruits">Banana</div>
+  <div class="filterDiv fruits">Lemon</div>
+  <div class="filterDiv animals">Cow</div>
+
+</div>
+
+<script type="text/javascript" src= "../../static/js/filter.js"></script>
+<a href="/shadopsapp/about/">Learn More</a>
+</body>
+</html>
