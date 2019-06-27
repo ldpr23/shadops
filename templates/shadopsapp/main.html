@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<h1>ShadOps</h1>
+
+
+<div class="container-fluid">
+    <div class="row content">
+        <div id="snav" class="col-sm-3 sidenav">
+
+            <hr>
+            <ul class="nav nav-pills nav-stacked">
+
+                <div id="myBtnContainer">
+
+                    <h3>Category</h3>
+
+                    <div>
+
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseLocation" aria-expanded="false" aria-controls="collapseExample">
+                            Location
+                        </button>
+                        <div class = "collapse" id="collapseLocation" >
+                            <li><button class="btn"  onclick="filterSelection('Glasgow')"> Glasgow</button></li>
+                            <li><button class="btn"  onclick="filterSelection('London')"> London</button></li>
+                        </div>
+                    </div>
+
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Building
+                        </button>
+                        <div class = "collapse" id="collapseExample" >
+                            <li><button class="btn"  onclick="filterSelection('waterloo')"> Wateroo</button></li>
+                            <li><button class="btn"  onclick="filterSelection('bothwell')"> Bothwell</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+
+                    <div>
+                        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseTech" aria-expanded="false" aria-controls="collapseExample">
+                            Technology
+                        </button>
+                        <div class = "collapse" id="collapseTech" >
+                            <li><button class="btn"  onclick="filterSelection('ai')"> AI/ML</button></li>
+                            <li><button class="btn"  onclick="filterSelection('cloud')"> Cloud</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseLang" aria-expanded="false" aria-controls="collapseExample">
+                            Languages
+                        </button>
+                        <div class = "collapse" id="collapseLang" >
+                            <li><button class="btn"  onclick="filterSelection('java')"> Java</button></li>
+                            <li><button class="btn"  onclick="filterSelection('js')"> JavaScript</button></li>
+                        </div>
+                    </div>
+                    <div class = "spacer"></div>
+
+                    <div>
+                        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseBusiness" aria-expanded="false" aria-controls="collapseExample">
+                            Line of Business
+                        </button>
+                        <div class = "collapse" id="collapseBusiness" >
+                            <li><button class="btn"  onclick="filterSelection('cib')"> CiB</button></li>
+                            <li><button class="btn"  onclick="filterSelection('awm')"> AWM</button></li>
+                        </div>
+                    </div>
+                </div>
+
+            </ul><br>
+
+        </div>
+
+        <div class="col-sm-9">
+            <h3>Matches</h3>
+            <hr>
+            <h2>John Morgan</h2>
+            <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+            <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <br><br>
+
+            <h4><small>RECENT POSTS</small></h4>
+            <hr>
+            <h2>Intern 2 ...</h2>
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <p>ShadOps</p>
+</footer>
+
+</body>
+</html>
