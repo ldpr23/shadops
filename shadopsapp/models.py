@@ -1,16 +1,17 @@
 from django.db import models
 
 # Create your models here.
-class Person():
-  def __init__(self, fname, lname, loc, lang, tech, lob):
+class Person(models.Model):
+  def __init__(self, id, fname, lname, loc, lang, tech, lob):
 
-    # current info about job
+    # current info about job#
+    self.id = id
     self.fname = fname
     self.lname = lname
-    self.lang = lang
-    self.tech = tech
-    self.lob = lob
     self.loc = loc
+    self.lang = lang
+    self.tech = Technology(tech)
+    self.lob = lob
       
     # desired info for shadowing
     self.desiredLoc = []
@@ -30,3 +31,12 @@ class Person():
 
     def set_lob(self, desiredLob): 
         self.desiredLob = desiredLob
+
+class Language():
+    def __init__(self, lang):
+        self.lang = lang
+
+class Tecnology():
+    def __init__(self, tech):
+        self.tech = tech
+ 

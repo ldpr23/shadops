@@ -7,27 +7,16 @@ def list_overlap(a, b):
             return True
     return False
 
-def main():
-    # this will be hard coded in examples    
-    all_employees = [Person("Kim", "Stonehouse", "Glasgow", ["React", "Java"], ["Front End"], "CIB"),
-                    Person("Monika", "J", "London", ["Python", "PHP"], ["Data Science"], "AWM")]
-
-    employee_vectors = [[0,0,0], [0,0,0]]
-    employee_similarities = [0, 0]
-
-    # this will be passed in from front end user input
-    desiredLoc = ["Glasgow"]
-    desiredLang = ["Java"]
-    desiredTech = ["AI"]
-    desiredLob = ["CIB"]
-
-    # sets the employee vectors
-    for i in range(len(all_employees)):
-        # retrieve lists of employee's desires
-        loc = all_employees[i].loc
-        langList = all_employees[i].lang
-        techList = all_employees[i].tech
-        lob = all_employees[i].lob
+# calculates the similarity vector for each employee
+def set_vectors(desiredLoc, desiredLang, desiredTech, desiredLob, 
+            employees, vectors, similarities):
+    # for each employee
+    for i in range(len(employees)):
+        # retrieve employee attributes
+        loc = employees[i].loc
+        langList = employees[i].lang
+        techList = employees[i].tech
+        lob = employees[i].lob
 
         langFlag = 0
         techFlag = 0
@@ -49,14 +38,49 @@ def main():
                 lobFlag = 1
 
         # sets the vector entry
-        employee_vectors[i] = [langFlag, techFlag, lobFlag]
-        employee_similarities[i] = 0.4*langFlag + 0.4*techFlag + 0.2*lobFlag
+        vectors[i] = [langFlag, techFlag, lobFlag]
+        similarities[i] = round((0.4*langFlag + 0.4*techFlag + 0.2*lobFlag), 2)
 
-    most_similar_employee_score = max(employee_similarities)
-    most_similar_employee = all_employees[np.argmax(np.asarray(employee_similarities))].fname
+    return vectors, similarities
 
-    print(employee_similarities)
-    print(most_similar_employee)
+# calculates the most similar employee to the user
+def recommend(employees, similarities):
+    most_sim_score = max(similarities)
+    index = np.argmax(np.asarray(similarities))
+    most_sim_employee = employees[index].fname
+    
+    return most_sim_employee
+
+def main():
+    # hard coded examples of every employee    
+    employees = [Person('X183746' 'Kim', 'Stonehouse', 'Glasgow', ['Java', 'Python'], ['Front End'], 'CIB'),
+                Person('B837492', 'Monika', 'Jotautaite', 'Glasgow', ['Python'], ['AI', 'ML', 'Blockchain'], 'CIB'),
+                Person('K837203', 'Martin', 'Dimitrov', 'Glasgow', ['Python','Java'], ['AI', 'ML'], 'CIB'),
+                Person('L728492', 'Simona', 'Paulauskaite', 'Glasgow', ['Python','PHP'], ['Blockchain'], 'CIB'), 
+                Person('N877293', 'Lyubomir', 'Ivanov', 'Glasgow', ['Go','PHP'], ['API','Cybersecurity'], 'CIB'),
+                Person('A288731', 'Ivelina', 'Doynova', 'Glasgow', ['Go','Java'], ['Webapp', 'API'], 'CIB'),
+                Person('G332482', 'Corrina', 'Galetza', 'Glasgow', ['Java','PHP'], ['Blockchain', 'Cybersecurity'], 'CIB'), 
+                Person('R829937', 'Adithya', 'Ajith', 'Glasgow', ['Python','PHP', 'Go'], ['Blockchain', 'Neural Networks'], 'CIB')]
+
+    # all vectors and similarities begin as zero
+    vectors = [[0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0]]
+    similarities = [0, 0, 0, 0, 0, 0, 0, 0]
+
+    # passed in from front end user input
+    desiredLoc = ["Glasgow"]
+    desiredLang = ["Java"]
+    desiredTech = ["AI"]
+    desiredLob = ["CIB"]
+
+    # calculate the vectors
+    (vectors, similarities) = set_vectors(desiredLoc, desiredLang, desiredTech, desiredLob, 
+                        employees, vectors, similarities)
+
+    # calculate the most similar employee
+    most_sim_employee = recommend(employees, similarities)
+
+    print(similarities)
+    print(most_sim_employee)
 
 if __name__ == "__main__":
     main()
