@@ -26,4 +26,4 @@ class person:
         self.desiredTech = desiredTech 
 
     def set_lob(self, desiredLob): 
-        self.desiredLob = desiredLob 
+        self.desiredLob = desiredLob
