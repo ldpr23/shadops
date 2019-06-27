@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Person(models.Model):
-  def __init__(self, fname, lname, lang, tech, lob, loc):
+class Person():
+  def __init__(self, fname, lname, loc, lang, tech, lob):
 
     # current info about job
     self.fname = fname

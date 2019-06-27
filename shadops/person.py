@@ -4,10 +4,10 @@ class person:
     # basic info about current job
     self.fname = fname
     self.lname = lname
+    self.loc = loc
     self.lang = lang
     self.tech = tech
     self.lob = lob
-    self.loc = loc
       
     # desired info for shadowing
     self.desiredLoc = ""
