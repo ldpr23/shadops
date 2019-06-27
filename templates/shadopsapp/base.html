@@ -6,14 +6,132 @@
 </head>
 <body>
 
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-12">
+      <h2>ShadOps</h2>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <h3>Category</h3>
+    </div>
+    <div class="col col-lg-8">
+      <h2>Results</h2>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+        <button class="btn" onclick="filterSelection('location')"> Location</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv location">Glasgow</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv cars">London</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('building')"> Building</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv building">Waterloo</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv building">Bothwell</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('tech')"> Technology</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">ML/AI</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Cloud</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('languages')"> Languages</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Python</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">Java</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <button class="btn" onclick="filterSelection('lob')"> Line of Business</button>
+    </div>
+    <div class="col col-lg-8">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-4">
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">CIB</div>
+      </div>
+      <div clas="col col-lg-2">
+        <div class="filterDiv tech">AWM</div>
+      </div>
+    </div>
+    <div class="col col-lg-8">
+      <text>Results</text>
+    </div>
+  </div>
+
+</div>
+
+
+
 <!-- Control buttons -->
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('location')"> Location</button>
-  <button class="btn" onclick="filterSelection('building')"> Building</button>
-  <button class="btn" onclick="filterSelection('tech')"> Technology</button>
-  <button class="btn" onclick="filterSelection('languages')"> Languages</button>
-  <button class="btn" onclick="filterSelection('lob')"> Line of Business</button>
 </div>
 
 <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
@@ -31,9 +149,10 @@
   <div class="filterDiv fruits">Banana</div>
   <div class="filterDiv fruits">Lemon</div>
   <div class="filterDiv animals">Cow</div>
-    <script type="text/javascript" src= "../../static/js/filter.js"></script>
 
 </div>
+
+<script type="text/javascript" src= "../../static/js/filter.js"></script>
 <a href="/shadopsapp/about/">Learn More</a>
 </body>
 </html>
