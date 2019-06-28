@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1>ShadOps</h1>
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div id="snav" class="col-sm-3 sidenav">
+          <hr />
+          <ul class="nav nav-pills nav-stacked">
+            <div id="myBtnContainer">
+              <h3>Category</h3>
+
+              <div>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseLocation"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Location
+                </button>
+                <div class="collapse" id="collapseLocation">
+                  <li>
+                    <button class="btn" onclick="filterSelection('Glasgow')">
+                      Glasgow
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('London')">
+                      London
+                    </button>
+                  </li>
+                </div>
+              </div>
+
+              <div class="spacer"></div>
+
+              <div>
+                <button
+                  class="btn btn-success"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseExample"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Building
+                </button>
+                <div class="collapse" id="collapseExample">
+                  <li>
+                    <button class="btn" onclick="filterSelection('Waterloo')">
+                      Wateroo
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Bothwell')">
+                      Bothwell
+                    </button>
+                  </li>
+                </div>
+              </div>
+              <div class="spacer"></div>
+
+              <div>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTech"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Technology
+                </button>
+                <div class="collapse" id="collapseTech">
+                  <li>
+                    <button class="btn" onclick="filterSelection('AI')">
+                      AI/ML
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Cloud')">
+                      Cloud
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Blockchain')">
+                      Blockchain
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="btn"
+                      onclick="filterSelection('Cybersecurity')"
+                    >
+                      Cybersecurity
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Webapp')">
+                      Webapp
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('API')">
+                      API
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Networks')">
+                      Networks
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('CI')">
+                      CI
+                    </button>
+                  </li>
+                </div>
+              </div>
+              <div class="spacer"></div>
+
+              <div>
+                <button
+                  class="btn btn-warning"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseLang"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Languages
+                </button>
+                <div class="collapse" id="collapseLang">
+                  <li>
+                    <button class="btn" onclick="filterSelection('Java')">
+                      Java
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('JavaScript')">
+                      JavaScript
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Python')">
+                      Python
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('PHP')">
+                      PHP
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('Go')">
+                      Go
+                    </button>
+                  </li>
+                </div>
+              </div>
+              <div class="spacer"></div>
+
+              <div>
+                <button
+                  class="btn btn-info"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseBusiness"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Line of Business
+                </button>
+                <div class="collapse" id="collapseBusiness">
+                  <li>
+                    <button class="btn" onclick="filterSelection('cib')">
+                      CiB
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn" onclick="filterSelection('awm')">
+                      AWM
+                    </button>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <br />
+        </div>
+        <h3>Matches</h3>
+        <div class="container">
+          <div class="emp filterDiv col-sm-9 Glasgow Bothwell CIB Java Python">
+            <div class=""></div>
+            <h2>Kim Stonehouse</h2>
+            <h5>
+              <span class="label label-danger">AI</span>
+              <span class="label label-primary">Glasgow</span>
+              <span class="label label-success">Bothwell</span>
+              <span class="label label-warning">Java</span>
+              <span class="label label-warning">Python</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>Glasgow</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>Java, Python</span></h4>
+            <br /><br />
+          </div>
+
+          <div class="emp filterDiv col-sm-9 AI Blockchain Glasgow Waterloo">
+            <h2>Monika Jotautaite</h2>
+            <div class="taglist"></div>
+            <h5>
+              <span class="label label-danger">AI/ML</span>
+              <span class="label label-danger">Blockchain</span>
+              <span class="label label-primary">Glasgow</span>
+              <span class="label label-success">Waterloo</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>Glasgow</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>Java, Python</span></h4>
+            <br /><br />
+          </div>
+
+          <div
+            class="emp filterDiv col-sm-9 taglist AI Glasgow Waterloo Java Python CIB"
+          >
+            <h2>Martin Dimitrov</h2>
+            <div class=""></div>
+            <h5>
+              <span class="label label-danger">AI</span>
+              <span class="label label-primary">Glasgow</span>
+              <span class="label label-success">Waterloo</span>
+              <span class="label label-warning">Java</span>
+              <span class="label label-warning">Python</span>
+              <span class="label label-info">CIB</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>Glasgow</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>Java, Python</span></h4>
+            <br /><br />
+          </div>
+
+          <div class="emp filterDiv col-sm-9 Glasgow Bothwell PHP Python CIB">
+            <h2>Simona Paulauskaite</h2>
+            <div class=""></div>
+            <h5>
+              <span class="label label-primary">Glasgow</span>
+              <span class="label label-success">Bothwell</span>
+              <span class="label label-warning">PHP</span>
+              <span class="label label-warning">Python</span>
+              <span class="label label-info">CIB</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>Glasgow</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>PHP, Python</span></h4>
+            <br /><br />
+          </div>
+
+          <div
+            class="emp filterDiv col-sm-9 London Waterloo PHP Cybersecurity CIB"
+          >
+            <h2>Lyubomir Ivanov</h2>
+            <div class=""></div>
+            <h5>
+              <span class="label label-primary">London</span>
+              <span class="label label-success">Waterloo</span>
+              <span class="label label-danger">AI/ML</span>
+              <span class="label label-danger">API</span>
+              <span class="label label-danger">Cybersecurity</span>
+              <span class="label label-warning">PHP</span>
+              <span class="label label-warning">Go</span>
+              <span class="label label-info">CIB</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>London</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>PHP, Go</span></h4>
+            <br /><br />
+          </div>
+            <div
+            class="emp filterDiv col-sm-9 Glasgow Waterloo Go Webapp API CIB"
+            >
+            <h2>Ivelina Doynova</h2>
+            <div class=""></div>
+            <h5>
+            <span class="label label-primary">Glasgow</span>
+            <span class="label label-success">Waterloo</span>
+            <span class="label label-danger">Webapp</span>
+            <span class="label label-danger">API</span>
+            <span class="label label-danger">Cybersecurity</span>
+            <span class="label label-danger">Cloud</span>
+            <span class="label label-warning">Java</span>
+            <span class="label label-warning">Go</span>
+            <span class="label label-info">CIB</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>Glasgow</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>Java, Go</span></h4>
+            <br /><br />
+            </div>
+
+            <div
+            class="emp filterDiv col-sm-9 London Waterloo Webapp Cloud JavaScript PHP Java CIB"
+            >
+            <h2>Corrina Galetza</h2>
+            <div class=""></div>
+            <h5>
+                <span class="label label-primary">London</span>
+                <span class="label label-success">Waterloo</span>
+                <span class="label label-danger">Webapp</span>
+                <span class="label label-danger">API</span>
+                <span class="label label-danger">Cloud</span>
+                <span class="label label-danger">Webapp</span>        
+                <span class="label label-warning">Java</span>
+                <span class="label label-warning">JavaScript</span>
+                <span class="label label-warning">PHP</span>
+                <span class="label label-info">CIB</span>
+            </h5>
+            <br />
+            <h4><strong>Location:</strong> <span>London</span></h4>
+            <h4><strong>Line of Business:</strong> <span>CIB</span></h4>
+            <h4><strong>Languages:</strong> <span>Java, JavaScript</span></h4>
+            <br /><br />
+            </div>
+
+            </div>
+
+      </div>
+      </div>
+        </div>
+
+       
+
+    <footer class="container-fluid">
+      <p>ShadOps</p>
+    </footer>
+
+    <script src="./filter.js"></script>
+  </body>
+</html>
